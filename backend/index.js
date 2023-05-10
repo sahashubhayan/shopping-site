@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 require("dotenv").config();
 
 const productRouter = require("./routes/productRoutes");
@@ -7,6 +8,12 @@ const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
 
 const app = express();
+
+app.use(
+  cors({
+  origin: '*',
+  })
+);
 
 const mongodbURI = process.env.MONGODB_URI;
 
@@ -28,6 +35,6 @@ app.use(express.json());
 app.use(productRouter);
 app.use(userRouter);
 
-app.listen(3000, "0.0.0.0", () => {
-    console.log("Server started at port 3000");
+app.listen(4000, "0.0.0.0", () => {
+    console.log("Server started at port 4000");
 });
