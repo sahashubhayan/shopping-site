@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
+import '../styles/shop.css';
 
 const fetchProductData = async () => {
   const res = await axios.get('http://localhost:4000/products');

@@ -1,0 +1,6 @@
+.store-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 15px;
+}
